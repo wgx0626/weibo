@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<a href="/messagePost.html">写留言</a><br>
+
+@ for(msg in message){
+
+<table border="1px" width="500px">
+    <tr>
+        <th><span>${msg.id}</span></th>
+        <th><span>${msg.title}</span></th>
+    </tr>
+
+    <tr>
+        <td colspan="2"><span>${msg.body}</span></td>
+    </tr>
+    <tr>
+        <td><a href="/msg/proModify?id=${msg.id}&title=${msg.title}">mod</a></td>
+        <td><a href="/msg/messageDelete?id=${msg.id}">del</a></td>
+    </tr>
+
+</table>
+@ }
+
+</body>
+</html>
